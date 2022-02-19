@@ -1,0 +1,121 @@
+﻿<Page x:Class="iPlantMLM.FPCProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920" Loaded="Page_Loaded"
+	Title="UserManagerPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="210"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="产品规格列表" FontWeight="Bold" FontSize="12" Margin="5,0,5,5">
+            <igWPF:XamDataGrid Margin="10"  Grid.Row="1" Grid.ColumnSpan="5" 
+                               Theme="Office2013" GroupByAreaLocation="None" x:Name="Xdg_MainGrid" PreviewMouseUp="TableClick" FontSize="20">
+                <igWPF:XamDataGrid.ViewSettings>
+                    <igWPF:GridViewSettings/>
+                </igWPF:XamDataGrid.ViewSettings>
+                <igWPF:XamDataGrid.FieldSettings>
+                    <igWPF:FieldSettings AllowRecordFiltering="True" AllowEdit="False" Width="auto" AllowResize="True" LabelTextAlignment="Center" />
+                </igWPF:XamDataGrid.FieldSettings>
+                <igWPF:XamDataGrid.FieldLayoutSettings>
+                    <igWPF:FieldLayoutSettings AutoGenerateFields="true"  RecordSelectorLocation="LeftOfCellArea" HeaderPrefixAreaDisplayMode="None" HeaderPlacementInGroupBy="OnTopOnly" HeaderPlacement="OnTopOnly"
+						                RecordSelectorNumberType="DataItemIndex" RecordSelectorNumberFormat="IncludeParentRecordNumber"  RecordSelectorNumberStart="1"/>
+                </igWPF:XamDataGrid.FieldLayoutSettings>
+                <igWPF:XamDataGrid.FieldLayouts>
+                    <igWPF:FieldLayout>
+                        <igWPF:Field Name="ProductID" Label="" Visibility="Collapsed"  />
+                        <igWPF:Field Name="ProductName" Label="产品规格" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Name" Label="产品名称" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Model" Label="产品型号" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="DescribeInfo" Label="产品描述" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="ProductCode" Label="生产阶段代码" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="BarCodePrefix" Label="二维码前缀" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="PackagePrefix" Label="电容包前缀" HorizontalContentAlignment="Center" Width="auto" />
+                    </igWPF:FieldLayout>
+                </igWPF:XamDataGrid.FieldLayouts>
+            </igWPF:XamDataGrid>
+        </GroupBox>
+
+        <GroupBox Header="产品规格操作" FontWeight="Bold" FontSize="12" Margin="5,0,5,5" Grid.Column="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel Name="Stp_Right">
+                    <Label Content="产品规格" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_UserName" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="产品名称" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_ProName" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="产品型号" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_Model" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="产品描述" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_Des" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="60" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="生产阶段代码" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_ProductCode" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="二维码前缀" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_CodePrefix" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="电容包前缀" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_PackagePrefix" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Button x:Name="Cmd_Add" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Add_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\保存.png" Height="25" />
+                            <Label>新增</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_Save" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Save_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\修改.png" Height="25" />
+                            <Label>修改</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_Delete" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Delete_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\删 除.png" Height="25" />
+                            <Label>删除</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_ResetPsw" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_ResetPsw_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\重置密码.png" Height="25" />
+                            <Label>Excel导出</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_CheckRule" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_CheckRule_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\制度规程.png" Height="25" />
+                            <Label>检测规程</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_CapacityRule" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_CapacityRule_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\24规则.png" Height="25" />
+                            <Label>分档规则</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_SOP" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_SOP_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\sop.png" Height="25" />
+                            <Label>作业指导书</Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</Page>

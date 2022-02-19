@@ -1,0 +1,78 @@
+﻿<Window x:Class="iPlantMLM.ModuleHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ig="http://schemas.infragistics.com/xaml"
+        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf"
+        Title="模组历史数据" Height="800" Width="1440" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TB_Title" Text="JC2111A0001LZ 历史记录" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <GroupBox Grid.Row="1" Grid.Column="0" Margin="5,0,5,5">
+            <GroupBox.Header>
+                <StackPanel>
+                    <Label Content="数据列表" FontWeight="Bold" FontSize="20"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <igWPF:XamDataGrid Margin="10"  Grid.Row="1" Grid.ColumnSpan="5" 
+                               Theme="Office2013" GroupByAreaLocation="None" x:Name="Xdg_MainGrid" FontSize="20" MouseDoubleClick="Xdg_MainGrid_MouseDoubleClick">
+                <igWPF:XamDataGrid.ViewSettings>
+                    <igWPF:GridViewSettings/>
+                </igWPF:XamDataGrid.ViewSettings>
+                <igWPF:XamDataGrid.FieldSettings>
+                    <igWPF:FieldSettings AllowRecordFiltering="True" AllowEdit="False" Width="auto" AllowResize="True" LabelTextAlignment="Center" />
+                </igWPF:XamDataGrid.FieldSettings>
+                <igWPF:XamDataGrid.FieldLayoutSettings>
+                    <igWPF:FieldLayoutSettings AutoGenerateFields="true"  RecordSelectorLocation="LeftOfCellArea" HeaderPrefixAreaDisplayMode="None" HeaderPlacementInGroupBy="OnTopOnly" HeaderPlacement="OnTopOnly"
+						                RecordSelectorNumberType="DataItemIndex" RecordSelectorNumberFormat="IncludeParentRecordNumber"  RecordSelectorNumberStart="1"/>
+                </igWPF:XamDataGrid.FieldLayoutSettings>
+                <igWPF:XamDataGrid.FieldLayouts>
+                    <igWPF:FieldLayout>
+                        <igWPF:Field Name="CapacitorPackageNo" Label="电容包编号" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="ModuleNumber" Label="模组编码" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="CreateTime" Label="检测日期" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="AppearanceQuality" Label="外观质量" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="PCBNo" Label="PCB编号" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="SingleNo" Label="单体编号" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="InsulationInternalResistance1" Label="绝缘电阻1" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="InternalImpedance1" Label="交流内阻1" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="R1Number" Label="R61阻值" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="R2Number" Label="R62阻值" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="StandingVoltage" Label="静置电压" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="StandingHour" Label="静置时间" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="MonomerVoltage" Label="单体电压检测结果" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Capacity" Label="容量" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="InternalResistance" Label="直流内阻" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="CapacityCompletion" Label="电容包装配完成度" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="AssemblyCompletion" Label="模组装配完成度" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="InsulationInternalResistance" Label="绝缘电阻2" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="InternalImpedance" Label="交流内阻2" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="WithstandVoltageTest" Label="耐压测试" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="LableInfo" Label="模组标签/档位信息" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Gear" Label="档位" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="SCTestResult" Label="三串测试结果" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="BarCode" Label="装箱条码" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="TrustBarCode" Label="装托条码" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="CurrentPartName" Label="当前工位" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="IsQualityText" Label="是否合格" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="IsQuality" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="ID" Label="ID" Visibility="Collapsed" />
+                        <igWPF:Field Name="SerialNumber" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="OnlineTime" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="OfflineTime" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="CurrentPartID" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="Times" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="ShiftID" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="CreateID" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="Creator" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="ProductID" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="Active" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="ActiveText" Label="" Visibility="Collapsed" />
+                    </igWPF:FieldLayout>
+                </igWPF:XamDataGrid.FieldLayouts>
+            </igWPF:XamDataGrid>
+        </GroupBox>
+    </Grid>
+</Window>

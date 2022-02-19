@@ -1,0 +1,121 @@
+﻿<Window xmlns:ig="http://schemas.infragistics.com/xaml"  
+        x:Class="Shris.NewEnergy.iPlant.Device.ExcSelectUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:My="clr-namespace:Shris.NewEnergy.iPlant.Device"
+        Title="车型选择" Height="800" Width="850" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  AllowsTransparency="True" WindowStyle="None" Background="Transparent" Icon="/Images/crrc_icon.jpg" FontSize="18">
+
+    <Window.Resources>
+        <Style x:Key="AddObjectStyle" TargetType="Image">
+            <Style.Triggers>
+                <Trigger Property="Image.IsMouseOver" Value="true">
+                    <Setter Property="Image.Source" Value="/Images/add.png"></Setter>
+                </Trigger>
+                <Trigger Property="Image.IsMouseOver" Value="false">
+                    <Setter Property="Image.Source" Value="/Images/add (2).png"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="RemoveObjectStyle" TargetType="Image">
+            <Style.Triggers>
+                <Trigger Property="Image.IsMouseOver" Value="true">
+                    <Setter Property="Image.Source" Value="/Images/remove.png"></Setter>
+                </Trigger>
+                <Trigger Property="Image.IsMouseOver" Value="false">
+                    <Setter Property="Image.Source" Value="/Images/remove (2).png"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="BorderStyleB" TargetType="Border">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="AliceBlue"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="BorderStyleC" TargetType="Border">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                    <Setter Property="BorderBrush" Value="#3E3E3E"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#3E3E3E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="IGBorderStyle" TargetType="Border">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#309ECB"/>
+                    <Setter Property="BorderBrush" Value="#2788B1"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="False">
+                    <Setter Property="Background" Value="#525252"/>
+                    <Setter Property="BorderBrush" Value="#3E3E3E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+    </Window.Resources>
+
+    <Border BorderBrush="Gray" BorderThickness="1"  Margin="0,0,0,0" VerticalAlignment="Center" Background="White">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="0,0,0,1" Background="#F0F0F0" Height="45">
+                <Grid>
+                    <Border BorderBrush="Gray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="5" Background="#eeeeee" Cursor="Hand" Width="80" Margin="5" PreviewMouseLeftButtonUp="TextBlock_PreviewMouseLeftButtonUp">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="0" />
+                        </Border.Effect>
+                        <Grid>
+                            <Image Grid.Column="1" Source="/Images/back.png" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                            <Label Content="返回" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black" Margin="0,0,8,0"/>
+                        </Grid>
+                    </Border>
+                    <TextBlock x:Name="TB_Title" Text="选择" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+
+                    <Border BorderBrush="Gray" HorizontalAlignment="Right" BorderThickness="1" CornerRadius="5" Background="#eeeeee" Cursor="Hand" Width="80" Margin="5" PreviewMouseLeftButtonUp="Border_PreviewMouseLeftButtonUp_1" Visibility="Collapsed" x:Name="Border_AllSelect">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="4" ShadowDepth="0" />
+                        </Border.Effect>
+                        <Grid>
+                            <Label Content="全选" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Margin="0,0,0,0"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Grid Margin="5">
+                <TextBlock Text="请输入搜索内容" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalAlignment="Left" Foreground="Gray" x:Name="TB_Search"/>
+                <TextBox Background="Transparent" Text="" x:Name="TE_CallContent" Height="45" VerticalContentAlignment="Center" Padding="20,0,0,0" BorderBrush="Blue"/>
+            </Grid>
+
+            <ScrollViewer Height="600"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" PanningMode="Both">
+                <Grid>
+                    <My:SelectItemUC Margin="0" x:Name="SIU_Items"/>
+
+                    <Grid x:Name="Grid_SearchTip" Margin="0,5,0,5" Visibility="Collapsed" VerticalAlignment="Top">
+                        <TextBlock Text="搜索结果为空!" Margin="5,0,5,0" FontSize="20" HorizontalAlignment="Center" Foreground="Red"/>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+            
+            <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="0,1,0,0" Background="White" Height="50" Margin="0">
+                <Border Grid.Row="2" CornerRadius="8" HorizontalAlignment="Center" Width="150" Height="35" BorderThickness="1" Margin="5" Style="{StaticResource BorderStyleB}" x:Name="BT_Save" Cursor="Hand" MouseUp="BT_Save_MouseUp">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Width="25" Source="/Images/hj_qr.png"/>
+                        <Label Content="确认" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Border>
+            </Border>
+        </StackPanel>
+    </Border>
+</Window>

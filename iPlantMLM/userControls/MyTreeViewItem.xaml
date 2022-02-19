@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="iPlantMLM.MyTreeViewItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="300" FontSize="20">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Grid VerticalAlignment="Top">
+                <Image Source="../images/收起.png" Width="30" Height="30" VerticalAlignment="Top" Cursor="Hand" x:Name="Image_Hide" Visibility="Collapsed" MouseLeftButtonUp="Image_Hide_MouseLeftButtonUp"/>
+                <Image Source="../images/展开.png" Width="30" Height="30" VerticalAlignment="Top" Cursor="Hand"  x:Name="Image_Show" Visibility="Visible" MouseLeftButtonUp="Image_Show_MouseLeftButtonUp"/>
+            </Grid>
+            <TextBlock Text="文本菜单" FontSize="20" VerticalAlignment="Top" Margin="0,2,0,0" x:Name="Header"/>
+        </StackPanel>
+        <Grid Margin="60,0,0,0" x:Name="Grid_Main" Visibility="Visible">
+
+        </Grid>
+    </StackPanel>
+</UserControl>

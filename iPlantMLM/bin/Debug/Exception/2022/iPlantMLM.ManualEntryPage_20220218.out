@@ -1,0 +1,36 @@
+Time=12:40:05 BW_Print_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组编码\20220218\模组编码.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_Print_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1655
+Time=12:41:52 BW_Print_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组编码\20220218\模组编码.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_Print_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1655
+Time=12:44:39 BW_Print_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组编码\20220218\模组编码.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_Print_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1655
+Time=13:30:36 BW_PrintBQ_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组标签\20220218\模组标签.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_PrintBQ_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 918
+Time=13:39:01 BW_PrintBQ_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组标签\20220218\模组标签.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_PrintBQ_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 922
+Time=13:39:21 BW_PrintBQ_DoWork():System.IO.IOException: 文件“C:\Users\Shris\Desktop\MES模组标签\20220218\模组标签.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.ManualEntryPage.BW_PrintBQ_DoWork(Object sender, DoWorkEventArgs e, Boolean wIsJF) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 922

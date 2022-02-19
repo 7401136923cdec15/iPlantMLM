@@ -1,0 +1,24 @@
+Time=12:55:28 Btn_ExportModule_Click():System.IO.IOException: 文件“C:\Users\Shris\Desktop\工位导出数据.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.HistoryWindow1.Btn_ExportModule_Click(Object sender, RoutedEventArgs e) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\windows\HistoryWindow1.xaml.cs:行号 249
+Time=12:57:55 Btn_ExportModule_Click():System.IO.IOException: 文件“C:\Users\Shris\Desktop\工位导出数据.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.HistoryWindow1.Btn_ExportModule_Click(Object sender, RoutedEventArgs e) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\windows\HistoryWindow1.xaml.cs:行号 249
+Time=12:57:59 Btn_ExportModule_Click():System.IO.IOException: 文件“C:\Users\Shris\Desktop\工位导出数据.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.HistoryWindow1.Btn_ExportModule_Click(Object sender, RoutedEventArgs e) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\windows\HistoryWindow1.xaml.cs:行号 249
+Time=13:01:17 Btn_ExportModule_Click():System.IO.IOException: 文件“C:\Users\Shris\Desktop\工位导出数据.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.IO.File.Create(String path)
+   在 iPlantMLM.HistoryWindow1.Btn_ExportModule_Click(Object sender, RoutedEventArgs e) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\windows\HistoryWindow1.xaml.cs:行号 249

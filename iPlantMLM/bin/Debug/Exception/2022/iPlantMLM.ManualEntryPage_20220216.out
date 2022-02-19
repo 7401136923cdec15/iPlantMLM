@@ -1,0 +1,6 @@
+Time=19:53:32 EnterIsQuality_DoWork():System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 iPlantMLM.ManualEntryPage.EnterIsQuality_DoWork(Object s, DoWorkEventArgs e, String wCode) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1207
+Time=19:53:48 EnterIsQuality_DoWork():System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 iPlantMLM.ManualEntryPage.EnterIsQuality_DoWork(Object s, DoWorkEventArgs e, String wCode) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1207
+Time=21:44:13 EnterIsQuality_DoWork():System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 iPlantMLM.ManualEntryPage.EnterIsQuality_DoWork(Object s, DoWorkEventArgs e, String wCode) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntryPage.xaml.cs:行号 1275

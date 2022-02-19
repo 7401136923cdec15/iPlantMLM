@@ -1,0 +1,91 @@
+﻿<Page x:Class="iPlantMLM.DataEntryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+	Title="数据录入" Background="White" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Margin="10,10,0,10" CornerRadius="5">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="Grid_Head">
+                    
+                </Grid>
+                <ScrollViewer x:Name="SV_DateList" Grid.Row="0" Grid.RowSpan="2" Visibility="Visible" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"  PanningMode="Both" Padding="0,55,0,0">
+                    <StackPanel Orientation="Vertical" x:Name="SP_ValueList">
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+
+        </Border>
+        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="数据录入" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Margin="5,0,5,0" x:Name="SP_InputSetting">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Background="#F0F0F0">
+                            <TextBlock Text="电容包编号:" HorizontalAlignment="Right" FontSize="20" Margin="0,5,5,5" x:Name="TB_Title"/>
+                        </Border>
+                        <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="0,1,1,1">
+                            <Grid>
+                                <TextBox BorderThickness="0" Text="" FontSize="18" VerticalContentAlignment="Center"  Padding="10,0,0,0" x:Name="TB_CapacitorPackageNo" CaretBrush="Red" TextChanged="TB_CapacitorPackageNo_TextInput" AcceptsReturn="True"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <StackPanel Orientation="Vertical" x:Name="SP_DynamicInput">
+                        <!--<Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="140"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1,0,1,1" Background="#F0F0F0">
+                                <TextBlock Text="外观质量:" HorizontalAlignment="Right" FontSize="20" Margin="0,5,5,5"/>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="0,0,1,1">
+                                <Grid>
+                                    <ComboBox FontSize="20" HorizontalContentAlignment="Left" Padding="10,0,0,0" VerticalContentAlignment="Center">
+                                        <ComboBoxItem Content="OK" IsSelected="True"/>
+                                        <ComboBoxItem Content="NG"/>
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
+                        </Grid>-->
+                    </StackPanel>
+                    <Button x:Name="Cmd_Save" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="360" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="40" Click="Cmd_Save_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\保存.png" Height="25" />
+                            <Label FontSize="20">保存</Label>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="Cmd_History" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="360" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="40" Click="Cmd_History_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\查询_黑.png" Height="25" />
+                            <Label FontSize="20">历史记录</Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

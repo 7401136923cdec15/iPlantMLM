@@ -1,0 +1,12 @@
+﻿<Window x:Class="iPlantMLM.HistoryRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="历史记录" Height="800" Width="1440" WindowStartupLocation="CenterScreen" FontSize="20">
+
+    <ScrollViewer x:Name="SV_DateList" Visibility="Visible" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"  PanningMode="Both">
+        <WrapPanel Orientation="Horizontal" Margin="10" x:Name="SP_Main" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        </WrapPanel>
+    </ScrollViewer>
+
+</Window>

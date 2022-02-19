@@ -1,0 +1,3 @@
+Time=19:21:31 IsQuality_DoWork():System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 iPlantMLM.ManualEntry030Page.IsQuality_DoWork(Object s, DoWorkEventArgs e, Dictionary`2 wDicData) 位置 c:\Users\Shris\Desktop\iPlantMLM\iPlantMLM\pages\ManualEntry030Page.xaml.cs:行号 796

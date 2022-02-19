@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ArrayOfFPCProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FPCProduct>
+    <ProductID>1</ProductID>
+    <ProductName>160V10FTBA</ProductName>
+    <Name>超级电容模组(UC Module)</Name>
+    <Model>MDCM0010C0-0160R0TBA</Model>
+    <DescribeInfo>甲方</DescribeInfo>
+    <ProductCode>N</ProductCode>
+    <BarCodePrefix>MC10176100*SN</BarCodePrefix>
+    <PackagePrefix>JI</PackagePrefix>
+  </FPCProduct>
+  <FPCProduct>
+    <ProductID>2</ProductID>
+    <ProductName>160V10FTBY</ProductName>
+    <Name>超级电容模组(UC Module)</Name>
+    <Model>MDCM0010C0-0160R0TBY</Model>
+    <DescribeInfo>试生产</DescribeInfo>
+    <ProductCode>N</ProductCode>
+    <BarCodePrefix>MC10176100*SN</BarCodePrefix>
+    <PackagePrefix>JC</PackagePrefix>
+  </FPCProduct>
+  <FPCProduct>
+    <ProductID>3</ProductID>
+    <ProductName>160V12FTBA</ProductName>
+    <Name>超级电容模组(UC Module)</Name>
+    <Model>MDCM0010C0-0160R0TBA</Model>
+    <DescribeInfo>试生产</DescribeInfo>
+    <ProductCode>N</ProductCode>
+    <BarCodePrefix>MC10176100*SN</BarCodePrefix>
+    <PackagePrefix>JE</PackagePrefix>
+  </FPCProduct>
+  <FPCProduct>
+    <ProductID>4</ProductID>
+    <ProductName>240V3.7F</ProductName>
+    <Name>超级电容模组(UC Module)</Name>
+    <Model>MDCM0010C0-0160R0TBY</Model>
+    <DescribeInfo>预留</DescribeInfo>
+    <ProductCode>N</ProductCode>
+    <BarCodePrefix>MC10176100*SN</BarCodePrefix>
+    <PackagePrefix>JY</PackagePrefix>
+  </FPCProduct>
+</ArrayOfFPCProduct>

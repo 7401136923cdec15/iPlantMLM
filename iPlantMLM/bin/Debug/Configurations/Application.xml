@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<ConfigList>
+  <Config>
+    <Item>ThreadTicks</Item>
+    <Value>1000</Value>
+  </Config>
+  <Config>
+    <Item>ServerName</Item>
+    <Value>127.0.0.1</Value>
+  </Config>
+  <Config>
+    <Item>DataBase</Item>
+    <Value>iplantmlm</Value>
+  </Config>
+  <Config>
+    <Item>UserName</Item>
+    <Value>shris</Value>
+  </Config>
+  <Config>
+    <Item>Password</Item>
+    <Value>Shris_123</Value>
+  </Config>
+  <Config>
+    <Item>Port</Item>
+    <Value>3306</Value>
+  </Config>
+  <Config>
+    <Item>LoggerMode</Item>
+    <Value>1</Value>
+  </Config>
+  <Config>
+    <Item>ExceptionMode</Item>
+    <Value>1</Value>
+  </Config>
+  <Config>
+    <Item>LoggerDays</Item>
+    <Value>60</Value>
+  </Config>
+  <Config>
+    <Item>ExceptionDays</Item>
+    <Value>60</Value>
+  </Config>
+  <Config>
+    <Item>DebuggerDays</Item>
+    <Value>1</Value>
+  </Config>
+</ConfigList>

@@ -1,0 +1,102 @@
+﻿<Page x:Class="iPlantMLM.CapacityGradingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920" Loaded="Page_Loaded"
+	Title="UserManagerPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="210"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Header="容量分档列表" FontWeight="Bold" FontSize="12" Margin="5,0,5,5">
+            <igWPF:XamDataGrid Margin="10"  Grid.Row="1" Grid.ColumnSpan="5" 
+                               Theme="Office2013" GroupByAreaLocation="None" x:Name="Xdg_MainGrid" PreviewMouseUp="TableClick" FontSize="20">
+                <igWPF:XamDataGrid.ViewSettings>
+                    <igWPF:GridViewSettings/>
+                </igWPF:XamDataGrid.ViewSettings>
+                <igWPF:XamDataGrid.FieldSettings>
+                    <igWPF:FieldSettings AllowRecordFiltering="True" AllowEdit="False" Width="auto" AllowResize="True" LabelTextAlignment="Center" />
+                </igWPF:XamDataGrid.FieldSettings>
+                <igWPF:XamDataGrid.FieldLayoutSettings>
+                    <igWPF:FieldLayoutSettings AutoGenerateFields="true"  RecordSelectorLocation="LeftOfCellArea" HeaderPrefixAreaDisplayMode="None" HeaderPlacementInGroupBy="OnTopOnly" HeaderPlacement="OnTopOnly"
+						                RecordSelectorNumberType="DataItemIndex" RecordSelectorNumberFormat="IncludeParentRecordNumber"  RecordSelectorNumberStart="1"/>
+                </igWPF:XamDataGrid.FieldLayoutSettings>
+                <igWPF:XamDataGrid.FieldLayouts>
+                    <igWPF:FieldLayout>
+                        <igWPF:Field Name="ID" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="ProductID" Label="" Visibility="Collapsed"  />
+                        <igWPF:Field Name="ProductName" Label="产品规格" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Gear" Label="档位" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="LowerLimit" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="LowerLimitText" Label="下限(F)" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="UpLimit" Label="" Visibility="Collapsed" />
+                        <igWPF:Field Name="UpLimitText" Label="上限(F)" HorizontalContentAlignment="Center" Width="auto" />
+                        <igWPF:Field Name="Explain" Label="说明" HorizontalContentAlignment="Center" Width="auto" />
+                    </igWPF:FieldLayout>
+                </igWPF:XamDataGrid.FieldLayouts>
+            </igWPF:XamDataGrid>
+        </GroupBox>
+
+        <GroupBox Header="容量分档操作" FontWeight="Bold" FontSize="12" Margin="5,0,5,5" Grid.Column="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel Name="Stp_Right">
+                    <Label Content="产品规格" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <ComboBox Name="Cbb_Role" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160"  Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="White" SelectedValuePath="ProductID" DisplayMemberPath="ProductName"  />
+
+                    <Label Content="档位" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_UserName" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160" Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="容量下限(F)" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_WorkNo" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160"  Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="容量上限(F)" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+                    <TextBox Name="Tbx_Phone" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160"  Height="30" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="说明" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <TextBox Name="Tbx_Explain" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,-1,10,0" Width="160"  Height="60" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+
+                    <Button x:Name="Cmd_Save" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Save_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\保存.png" Height="25" />
+                            <Label>新增</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_Update" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Update_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\修改.png" Height="25" />
+                            <Label>修改</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_Delete" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Delete_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\删 除.png" Height="25" />
+                            <Label>删除</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_Import" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_Import_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\创建用户.png" Height="25" />
+                            <Label>Excel导入</Label>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="Cmd_ResetPsw" Cursor="Hand" BorderBrush="LightGray" BorderThickness="1" Margin="10,10,10,0" Width="160" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" Click="Cmd_ResetPsw_Click"  Background="#FF00B9FF">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/images\重置密码.png" Height="25" />
+                            <Label>Excel导出</Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</Page>
